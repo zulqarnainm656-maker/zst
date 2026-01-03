@@ -1,3 +1,4 @@
+/* Reset / basics */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -11,6 +12,7 @@ body {
   color: #333;
 }
 
+/* Header and navigation */
 header {
   background-color: rgba(0, 0, 0, 0.85);
   color: #fff;
@@ -49,13 +51,15 @@ nav a:hover {
   position: relative;
   height: 70vh;
   display: flex;
-  align-items: center;
+  align-items: flex-end;   /* put content at bottom */
   justify-content: center;
   text-align: center;
   color: #fff;
   overflow: hidden;
+  padding-bottom: 40px;    /* distance from very bottom edge */
 }
 
+/* container for video */
 .video-bg {
   position: absolute;
   top: 0;
@@ -69,17 +73,20 @@ nav a:hover {
 .video-bg video {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;     /* show full video, no cropping */
+  background-color: #000;  /* black bars if aspect ratio different */
 }
 
+/* text box on top of video */
 .hero-overlay {
   position: relative;
   z-index: 1;
   background-color: rgba(0, 0, 0, 0.5);
-  padding: 40px;
+  padding: 10px 25px;
   border-radius: 4px;
 }
 
+/* Main white content area */
 .main-content {
   max-width: 1100px;
   margin: 30px auto 40px;
@@ -100,6 +107,7 @@ section h2 {
   padding-bottom: 5px;
 }
 
+/* Shiny app iframe (for other pages) */
 iframe.shiny-app {
   width: 100%;
   height: 700px;
@@ -107,6 +115,7 @@ iframe.shiny-app {
   border-radius: 4px;
 }
 
+/* Footer */
 footer {
   text-align: center;
   padding: 15px 0;
@@ -114,7 +123,7 @@ footer {
   font-size: 0.9em;
 }
 
-/* Contact form */
+/* Contact form (for contact.html if you add it) */
 form label {
   display: block;
   margin-top: 10px;
