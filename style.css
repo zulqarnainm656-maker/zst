@@ -182,3 +182,44 @@ form button:hover {
   font-size: 0.9em;
   color: #555;
 }
+
+/* Blog page */
+.blog-list {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.blog-post {
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 20px;
+}
+
+.blog-post:last-child {
+  border-bottom: none;
+}
+
+.blog-post h2 {
+  margin-bottom: 5px;
+}
+
+.blog-meta {
+  font-size: 0.9em;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.blog-image-wrapper {
+  margin: 10px 0 15px;
+}
+
+.blog-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.15);
+}
+
+.blog-body p {
+  margin-bottom: 10px;
+}
